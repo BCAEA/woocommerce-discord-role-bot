@@ -1,0 +1,14 @@
+[Unit]
+Description=VF Discord Role Bot (NodeJS)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=linuxpony
+WorkingDirectory=/opt/discord-bot
+ExecStart=/usr/bin/node /opt/discord-bot/index.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
